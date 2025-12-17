@@ -350,7 +350,8 @@ FEATURES ↓
 }
 
 .feature {
-    width: calc(100% / 3);
+    width: 300px;
+    flex-wrap: wrap;
 }
 
 .row__narrow {
@@ -1331,7 +1332,11 @@ MOBILE RESPONSIVENESS ↓
 
 */
 
-
+@media (max-width: 640px) {
+    .container {
+        padding: 80px 0;
+    }
+}
 @media(max-width: 1280px) {
     header .row {
         align-items: flex-end;
@@ -1353,6 +1358,14 @@ MOBILE RESPONSIVENESS ↓
 }
 
 @media (max-width: 1024px) {
+    .header__description {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 465px) {
     .header__description {
         text-align: center;
         display: flex;
@@ -1384,7 +1397,30 @@ MOBILE RESPONSIVENESS ↓
         font-size: 16px;
     }
 }
-
+@media (max-width: 640px){
+    .header__email {
+        flex-direction: column;
+        height: auto;
+    }
+}
+@media (max-width: 640px) {
+    .header__email--input {
+        position: static;
+        padding: 16px 0;
+        padding-left: 32px;
+        line-height: 1.5;
+    }
+}
+@media (max-width: 640px) {
+    .header__email--btn {
+        flex-direction: column;
+        width: 100%;
+        padding: 16px 0;
+        margin-bottom: 0;
+        margin: 16px 0;
+        line-height: 1.5;
+    }
+}
 @media (max-width: 1024px) {
     .header__customers {
         padding-right: 0px;
@@ -1442,6 +1478,20 @@ MOBILE RESPONSIVENESS ↓
     }
 }
 
+@media (max-width: 640px) {
+    .feature__row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media (max-width: 640px) {
+    .feature {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
 @media (max-width: 1024px) {
     .section__para {
         font-size: 16px;
@@ -1489,7 +1539,19 @@ MOBILE RESPONSIVENESS ↓
         font-size: 36px;
     }
 }
-
+@media (max-width: 640px){
+    .feature__row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+@media (max-width: 640px) {
+    .feature__para {
+        margin-top: 4px;
+        line-height: 2;
+    }
+}
 @media (max-width: 1024px) {
     .plans {
         flex-direction: column;
